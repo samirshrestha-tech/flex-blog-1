@@ -1,0 +1,13 @@
+A. for each project:
+Run the following commands
+
+1. run initial
+2. run add.
+3. git -m "first commit"
+4. git remote add origin "your https destination"
+   5.git push -u origin main
+   copy 3 lines of codes
+   To update the code in existing project
+5. git add .
+6. git commit -m "explain what changes"
+7. git push
