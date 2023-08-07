@@ -1,0 +1,269 @@
+body {
+  margin: 0;
+}
+/* root selector acts as a root for all the values stored in one place so during development if there is any need for change in near future we can change the root value and the the whole document flow will change as well for the value set */
+:root {
+  --box-shadow: -5px 5px 20px 5px rgb(136, 116, 116);
+  --primary: red;
+}
+.btn {
+  background: rgb(145, 127, 163);
+  padding: 8px 16px;
+  border: 2px solid rgb(145, 127, 163);
+  border-radius: 5px;
+  box-shadow: var(--box-shadow);
+}
+
+/* global */
+.global {
+  background: linear-gradient(#ecf2e2, #e1eacb, #d6bc48);
+}
+.container {
+  width: 80%;
+  margin: auto;
+}
+.global > div {
+  /* for making the content inline  */
+  display: flex;
+  /* for giving the space bwtween the items within x-axis */
+  justify-content: space-between;
+
+  padding: 10px 0;
+  color: black;
+}
+/* ====header */
+header {
+  background: linear-gradient(to right, #ecf2e2, #22c1c3, #96be74);
+}
+header > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+}
+header ul {
+  display: flex;
+  list-style-type: none;
+}
+header ul li {
+  margin-left: 16px;
+  font-weight: bolder;
+  font-size: 20px;
+}
+.logo {
+  background: white;
+  color: var(--primary);
+  width: 80px;
+  height: 80px;
+  /* making the logo bolder */
+  font-weight: 900;
+
+  /* to center the logo  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.logo div {
+  border: 3px dotted blue;
+  width: 70px;
+  height: 70px;
+  /* to make the div round */
+  border-radius: 50%;
+  /* to align the logo in center */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* ====hero section */
+/* background image diff is it doesn't occupies space in the dom which the foreground image does */
+/* no-repeat center makes the image center at fixed postion no matter the change in size of the image */
+.hero {
+  background: url(./image/hill.avif) no-repeat center;
+  /* min height to make it responsive with the viewport */
+  min-height: 60vh;
+  /* increase the img size with respect to the change in screen size */
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-content {
+  background: rgba(0, 0, 0, 0.385);
+  color: rgba(255, 255, 255, 0.825);
+  width: 500px;
+
+  padding: 32px;
+  border-radius: 20px;
+
+  display: flex;
+  /* to put the content in vertical way as the flex property changed it to x-axis */
+  flex-direction: column;
+
+  align-items: center;
+}
+.hero-content hr {
+  width: 100%;
+}
+header ul li:hover {
+  cursor: pointer;
+  background: red;
+  /* Transform helps to change the state of any content, scale will multiply the size of original value */
+  transform: scale(1.5);
+}
+/* latest post */
+.main {
+  display: flex;
+  justify-content: space-between;
+  /* space between the items  */
+  gap: 16px;
+}
+.articles {
+  width: 66%;
+}
+
+/* footer */
+.footer {
+  background: black;
+  color: white;
+  padding: 50px;
+  text-align: center;
+  margin-top: 16px;
+}
+article {
+  display: flex;
+  gap: 16px;
+  /* box shadow  (-) left side (+) value for popping the shadow to the right for
+  for the opacity the 3rd value  */
+  box-shadow: var(--box-shadow);
+  padding: 20px 16px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+/* to make the img article small  */
+.art-img {
+  width: 182px;
+}
+.title {
+  font-size: 20px;
+  font-weight: bolder;
+  color: blueviolet;
+  font-family: sans-serif;
+}
+/* article button to keep it in right side*/
+article .btn {
+  float: right;
+}
+/* sidelinkss */
+.side-links {
+  width: 34%;
+}
+.country {
+  background: #d6bc48;
+  padding: 16px;
+  border-radius: 5px;
+  margin-bottom: 50px;
+  margin-top: 20px;
+  background: linear-gradient(rgb(200, 175, 175), #d6bc48);
+}
+.date {
+  background: #d6bc48;
+  padding: 16px;
+  border-radius: 5px;
+  margin-top: 88px;
+  background: linear-gradient(rgb(200, 175, 175), #d6bc48);
+}
+
+/* recccc */
+.recc {
+  background: #d6bc48;
+  margin-top: 60px;
+  padding-top: 30px;
+}
+.card-list {
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-bottom: 30px;
+}
+.card {
+  width: 350px;
+  box-shadow: var(--box-shadow);
+  background: white;
+  padding-bottom: 32px;
+  border-radius: 10px 10px 30px 40px;
+  flex-grow: 1;
+}
+.card img {
+  border-radius: 10px 10px 0 0;
+}
+/* subscribe */
+.subs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.subs input {
+  line-height: 42px;
+  border-radius: 8px;
+  margin-right: 16px;
+}
+/* media queries */
+
+/* @media (max-width:768px){
+   */
+/* phones */
+/* @media(min-width:768px) */
+/* {@media (768px< width <= 768px){
+  
+   */
+/* ===tablets  */
+@media (max-width: 992px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+  .articles {
+    width: 100%;
+  }
+  .side-links {
+    width: 100%;
+    display: flex;
+    gap: 32px;
+  }
+  .country,
+  .date {
+    width: 50%;
+    height: 200px;
+    margin-top: 48px;
+    /* for displaying the side bar in the center for tablets devices where we have made the two div as flex-items */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+/* phones 768px */
+@media (max-width: 768px) {
+  article {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .art-img,
+  .title {
+    width: 100%;
+  }
+  article .btn {
+    width: 100%;
+  }
+  .side-links {
+    display: flex;
+    flex-direction: column;
+  }
+  .country,
+  .date {
+    width: 100%;
+    margin-top: 16px;
+  }
+}
