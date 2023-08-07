@@ -209,6 +209,7 @@ article .btn {
   border-radius: 8px;
   margin-right: 16px;
 }
+
 /* media queries */
 
 /* @media (max-width:768px){
@@ -265,5 +266,11 @@ article .btn {
   .date {
     width: 100%;
     margin-top: 16px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
   }
 }

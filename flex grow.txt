@@ -1,0 +1,2 @@
+flex grow to increase the content area when the viewport size grows.
+flex shorthand 0 1 auto where o is for grow, 1 for shrink and auto for flex basic. 

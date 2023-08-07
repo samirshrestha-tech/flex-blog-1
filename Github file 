@@ -11,3 +11,6 @@ Run the following commands
 5. git add .
 6. git commit -m "explain what changes"
 7. git push
+   <!-- how to delete file from the github through terminal -->
+   You can directly delete the file in the file explorer.
+   and again add commit and push the file in the github.
